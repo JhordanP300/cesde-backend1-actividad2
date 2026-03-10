@@ -52,11 +52,6 @@ public class Estudiante {
     // metodo para mostrar la aprobación del estudiante
     boolean aprobado;
     public boolean haAprobado() {
-        if (promedio >= 3.0) {
-            aprobado = true;
-        } else {
-            aprobado = false;
-        }
         return aprobado;
     }
 
