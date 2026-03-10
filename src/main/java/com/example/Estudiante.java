@@ -1,4 +1,4 @@
-package com;
+package com.example;
 
 public class Estudiante {
 
@@ -9,9 +9,9 @@ public class Estudiante {
 
     // Constructor por defecto
     public Estudiante() {
-        nombre = "Desconocido";
-        edad = 0;
-        promedio = 0.0;
+        this.nombre = "Desconocido";
+        this.edad = 0;
+        this.promedio = 0.0;
     }
     // Constructor con parametros
     public Estudiante(String nombre, int edad, double promedio) {

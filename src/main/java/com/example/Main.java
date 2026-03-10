@@ -1,7 +1,5 @@
 package com.example;
 
-import com.Estudiante;
-
 public class Main {
     public static void main(String[] args) {
     
@@ -17,16 +15,16 @@ public class Main {
 
     System.out.println("-------------Practica 2 (set y get)----------------");
 
-        // creamos un objeto de la clase Estudiante
-        cuentaBancaria cuenta = new cuentaBancaria();
-        cuenta.setTitular("Maria"); // asignamos el nombre del titular a la cuenta bancaria con set
-        System.out.println("Titular: " + cuenta.getTitular("Maria")); // obtenemos el nombre del titular con get
-        cuenta.depositar(500); // depositamos dinero en la cuenta bancaria
-        System.out.println("Saldo: " + cuenta.getSaldo(500)); // obtenemos el saldo de la cuenta bancaria con get
+        // creamos un objeto de la clase CuentaBancaria
+        cuentaBancaria cuenta = new cuentaBancaria("Maria", 500); // asignamos el nombre del titular y el saldo inicial a la cuenta bancaria con el constructor
+        System.out.println("Titular: " + cuenta.getTitular()); // obtenemos el nombre del titular con get
+        cuenta.depositar(200); // depositamos dinero en la cuenta bancaria
+        System.out.println("Saldo: " + cuenta.getSaldo()); // obtenemos el saldo de la cuenta bancaria con get
         cuenta.retirar(1000); // retiramos dinero de la cuenta bancaria, si el saldo es insuficiente se muestra un mensaje de error
 
         System.out.println("-------------Practica 3 (Lógica y Métodos)----------------");
 
+        // creamos un objeto de la clase Estudiante
         Estudiante e = new Estudiante("Pedro", 21, 2.5);
         System.out.println("Nombre: " + e.getNombre());
         System.out.println("Edad: " + e.getEdad());

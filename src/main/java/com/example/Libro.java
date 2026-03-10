@@ -8,16 +8,16 @@ public class Libro {
 
 // constructor por defecto
     public Libro() {
-        titulo = "Desconocido";
-        autor = "Anonimo";
-        paginas = 0;
+        this.titulo = "Desconocido";
+        this.autor = "Anonimo";
+        this.paginas = 0;
     }
 
 // constructor con titulo y autor
     public Libro(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
-        paginas = 0;
+        this.paginas = 0;
     }
 
 // constructor con titulo, autor y paginas

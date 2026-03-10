@@ -3,47 +3,48 @@ package com.example;
 public class cuentaBancaria {
 
     private String titular;
-    private double saldo;
+    private double Saldo;
 
     // CONSTRUCTOR
-    public cuentaBancaria() {
-        this.titular = titular;
-        this.saldo = saldo;
+    public cuentaBancaria(String titular, double Saldo) {
+        this.titular=titular;
+        this.Saldo = Saldo;
+        
+        if (Saldo < 0) {
+            this.Saldo = 0;
+        }
     }
 
     // Metodos GETTER y SETTER
     // GET sirve para obtener el valor de un atributo
-    public String getTitular(String titular) {
-        return titular;
+    public String getTitular() {
+        return this.titular;
     }
     // SET sirve para asignar un valor a un atributo
     public void setTitular(String titular) {
         this.titular = titular;
     }
 
-    // GET para obtener el saldo, si el saldo es negativo se asigna 0
-    public double getSaldo(double saldo) {
-        if (saldo < 0) {
-            saldo = 0;
-        }
-        return saldo;
+    // GET para obtener el saldo.
+    public double getSaldo() {
+        return this.Saldo;
     }
 
 
     // metodo para depositar dinero
     public void depositar(double cantidad) {
         if (cantidad > 0) {
-            saldo += cantidad;
+            this.Saldo += cantidad;
         }
     }
 
     // metodo para retirar dinero
     public void retirar(double cantidad) {
-        if (cantidad > saldo || cantidad <= 0) {
-            System.out.println("Saldo insuficiente para retirar, su saldo actual es: "+ saldo);
+        if (cantidad > Saldo || cantidad <= 0) {
+            System.out.println("Saldo insuficiente para retirar, su saldo actual es: "+ Saldo);
         }else {
-            saldo -= cantidad;
-            System.out.println("Retiro exitoso, su saldo actual es: " + saldo);
+            Saldo -= cantidad;
+            System.out.println("Retiro exitoso, su saldo actual es: " + Saldo);
         }
 
     }
