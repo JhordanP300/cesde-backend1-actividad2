@@ -28,7 +28,7 @@ public class Libro {
     }
 
     // toString para mostrar la informacion del libro
-@Override
+    @Override
     public String toString() {
         return "Libro: " + titulo + "\n" +
                "Autor: " + autor + "\n" +
